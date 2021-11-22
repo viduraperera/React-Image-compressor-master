@@ -34,28 +34,18 @@ class imageCompressor extends React.Component {
   click = async e => {
     const ORIGINAL_IMAGE = this.state.originalImage;
     e.preventDefault();
-    console.log(`ORIGINAL_IMAGE ${ORIGINAL_IMAGE.size / 1024 / 1024} MB`);
-    console.log(`ORIGINAL_IMAGE ${ORIGINAL_IMAGE.size} `);
-
-    console.log("originalFile instanceof Blob", ORIGINAL_IMAGE instanceof Blob);
 
     const imageSize = (ORIGINAL_IMAGE.size / (1024 * 1024)).toFixed(1);
-    console.log(imageSize);
 
     const maxSize = 150 / 1024; // max size allowed
-    console.log("maxSize", maxSize);
 
     const minSize = 100 / 1024; // min size possible (after adjustment)
-    console.log("minSize", minSize);
 
     const compressionFactor = 0.25; // by how much the image size is to be reduced
-    console.log("compressionFactor", compressionFactor);
 
     const adjustedImageSize = Math.min(imageSize * compressionFactor, maxSize);
-    console.log("adjustedImageSize", adjustedImageSize);
 
     const compressedImageSize = Math.max(adjustedImageSize, minSize);
-    console.log("compressedImageSize", compressedImageSize);
 
     const options = {
       maxSizeMB: compressedImageSize
@@ -66,10 +56,8 @@ class imageCompressor extends React.Component {
     //   return 0;
     // }
 
-    console.log("options", options);
     try {
       const output = await imageCompression(ORIGINAL_IMAGE, options);
-      console.log(output);
       const downloadLink = URL.createObjectURL(output);
       this.setState({
         compressedLink: downloadLink
