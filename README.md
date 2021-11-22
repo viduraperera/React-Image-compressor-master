@@ -19,8 +19,7 @@ A simple image compressor built with [react](https://reactjs.org/) and [browser-
 1. Clone the repository and change directory.
 
 ```
-git clone https://github.com/abhishek305/React-Image-compressor.git
-Then navigate to the root directory of the project using cd folder name
+git clone https://github.com/viduraperera/React-Image-compressor-master.git
 ```
 
 2. Install npm dependencies
