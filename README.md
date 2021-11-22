@@ -1,4 +1,4 @@
-# React Image Compressor
+# React Image Compressor using browser-image-compression 
 
 ## Overview
 
@@ -6,8 +6,7 @@ A simple image compressor built with [react](https://reactjs.org/) and [browser-
 
 ## Functionalities
 
-- Compress Image By Reducing Resolution and Size
-- Offline Compression
+- Compress Image By Reducing Resolution
 
 ## Built With
 
